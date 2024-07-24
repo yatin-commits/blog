@@ -61,12 +61,12 @@ function App() {
 
   const  dltBtn=(index)=>
   {
-    const filterData=newData.filter((v,i)=>
-    {
+   
       const filteredData = newData.filter((_, i) => i !== index);
     setNewData(filteredData);
+    
+    
     NotificationManager.success( 'Blog Deleated SuccessFully!');
-    })
     
   }
 
@@ -101,7 +101,7 @@ function App() {
                   Description:
                   <textarea rows={8} onChange={changeDescription} value={descriptionName} cols={50} placeholder='Enter your description' />
                 </label>
-                <button className='submit' type='submit'>Submit</button>
+                <button className='submit' type="submit">Submit</button>
                 <button className='closeBtn'  type='button' onClick={toggleForm}>Close</button>
               </form>
             </div>
